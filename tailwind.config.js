@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'mona': ['Mona sans', 'sans-serif']
+        'mona': ['Mona sans', 'sans-serif'],
+        'mona-black': ['Mona black', 'sans-serif']
       }
     },
   },
