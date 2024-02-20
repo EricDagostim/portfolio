@@ -16,17 +16,18 @@ import { fadeInCopy } from '../../../../animations';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {  
-  public animationState: string = "out";
+  public animationState: string = "out";  
 
   constructor() { }
 
 
   copyEmail() {        
     navigator.clipboard.writeText("ericdagostim32@gmail.com")
-      .then(() => {        
+      .then(() => {                
         this.animationState = ":enter"
         setTimeout(() => {
           this.animationState = "out"
+          
         }, 2000);
       })
       .catch((error) => {
