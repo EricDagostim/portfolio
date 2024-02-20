@@ -100,7 +100,7 @@
       class="bg-slate-200 px-4 py-2 rounded-xl flex flex-row items-center justify-center gap-2 w-fit group relative"
     >
 
-    <div [ngClass]="badgeState" class="bg-blue-600 px-4 py-2 rounded-full absolute -bottom-10 -z-10 transition-all duration-200">
+    <div [@fadeInCopy]="this.animationState" class="bg-blue-600 px-4 py-2 rounded-full absolute -bottom-10 -z-10 transition-all duration-200">
       <p class="font-mona text-xs text-primary">Copiado!</p>
     </div>
 

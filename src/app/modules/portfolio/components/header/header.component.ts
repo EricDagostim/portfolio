@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
-import { fadeInAnimation } from '../../animations';
 import { CommonModule } from '@angular/common';
+import { fadeInCopy } from '../../../../animations';
 
 
 @Component({
@@ -11,29 +11,26 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   animations: [
-    fadeInAnimation
+    fadeInCopy
   ],
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {
-  public badgeState: string = "hidden";
-  public animationState: string = ":enter";
-
+export class HeaderComponent {  
+  public animationState: string = "out";
 
   constructor() { }
 
 
-  copyEmail() {
-    this.badgeState = "block"
-    console.log("Email copied to clipboard")
-
-
-    setTimeout(() => {
-      this.animationState = ":leave"
-    }, 2000);
-
-    setTimeout(() => {
-      this.badgeState = "hidden"
-    }, 2300);
+  copyEmail() {        
+    navigator.clipboard.writeText("ericdagostim32@gmail.com")
+      .then(() => {        
+        this.animationState = ":enter"
+        setTimeout(() => {
+          this.animationState = "out"
+        }, 2000);
+      })
+      .catch((error) => {
+        console.error("Failed to copy text to clipboard:", error);
+      });
   }
 }
