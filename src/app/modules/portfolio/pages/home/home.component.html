@@ -12,9 +12,10 @@
             Confira alguns do meus principais projetos.
         </p>
         <div class="mt-8 flex flex-wrap justify-center items-center gap-8">
-            <app-card-project></app-card-project>
-            <app-card-project></app-card-project>
-            <app-card-project></app-card-project>
+            @for (project of projects; track $index) {
+                <app-card-project [project]="project"></app-card-project>
+            }
+            
         </div>
     </section>
 

@@ -1,6 +1,6 @@
 <ul>
     
-    @for (item of items; track $index) {
+    @for (experience of experiences; track $index) {
   <li class="relative mt-10 first:mt-0 group">
       
       <div
@@ -10,20 +10,20 @@
 
     <div>
       <h3 class="font-mona text-lg font-semibold text-secondary">
-        Desenvolvedor Front-End
+        {{ experience.office}}
       </h3>
       <p class="font-mona text-md mb-4">
         <a
-          class="hover:underline hover:text-tertiary"
-          href="https://www.criciuma.sc.gov.br/site/"
-          target="_blank"
-          rel="noopener"
-          title="Ir para https://www.criciuma.sc.gov.br/site/"
+            class="hover:underline hover:text-tertiary"
+            [href]="experience.companyLink"
+            target="_blank"
+            rel="noopener"
+            title="Ir para https://www.criciuma.sc.gov.br/site/"
         >
-          Prefeitura Municipal de Criciúma
+          {{ experience.company }}
         </a>
         <span class="text-xs text-slate-400 ml-2">
-          Outubro de 2022 - Hoje
+          {{ experience.date }}
         </span>
       </p>
 
@@ -31,7 +31,7 @@
         class="shadow-lg outline-1 outline outline-slate-200 rounded-lg group"
       >
         <summary
-          class="p-4 select-none list-none flex justify-between items-center border-none"
+          class="p-4 select-none rounded-lg list-none flex justify-between items-center border-none cursor-pointer"
         >
           <span
             class="text-slate-400 group-hover:text-slate-500 transition-all duration-100"

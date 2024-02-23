@@ -16,4 +16,22 @@ import { ExperienceTimeLineComponent } from '../../components/experience-time-li
 })
 export class HomeComponent {
 
+  public projects = [
+    {
+      name: 'Malfoy o Bibliomântico',
+      thumbnail: '/assets/img/mockup-malfoy-o-bibliomantico.png',
+      demoLink: 'https://malfoy-o-bibliomantico.vercel.app/',
+    },
+    {
+      name: 'Viva Criciúma',
+      thumbnail: '/assets/img/mockup-site-vivacriciuma.png',
+      demoLink: 'https://viva.criciuma.sc.gov.br/',
+    },
+    {
+      name: 'Procon - Criciúma',
+      thumbnail: '/assets/img/mockup-site-procon.png',
+      demoLink: 'https://procon.criciuma.sc.gov.br/',
+    }
+  ];
+
 }

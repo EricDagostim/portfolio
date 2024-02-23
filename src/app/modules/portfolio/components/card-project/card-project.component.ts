@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-card-project',
@@ -7,5 +7,23 @@ import { Component } from '@angular/core';
   templateUrl: './card-project.component.html',
 })
 export class CardProjectComponent {
+  
+  @Input() public project:any;
+  // @Input() public tools:any;
+
+  public tools = [
+    {
+     name: 'Angular',
+     svg: ''
+    },
+    {
+     
+    },
+    {
+     
+    }
+  ]
+
+
 
 }
