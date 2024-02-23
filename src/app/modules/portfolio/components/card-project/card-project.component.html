@@ -16,32 +16,12 @@
 
   <div class="flex flex-row justify-center items-center gap-4 relative">
         
-    @for (tool of tools; track $index) {
+    @for (tool of project.tools; track $index) {
       <div class="group">
-        <svg
-          class="w-7 max-[425px]:w-5"
-          width="35"
-          height="38"
-          viewBox="0 0 35 38"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17.4116 0L0 6.20954L2.65549 29.2312L17.4116 37.4041L32.1676 29.2312L34.8231 6.20918L17.4116 0Z"
-            fill="#DD0031"
-          />
-          <path
-            d="M17.4116 0V4.15199V4.13336V37.4041L32.1677 29.2312L34.8232 6.20918L17.4116 0Z"
-            fill="#C3002F"
-          />
-          <path
-            d="M17.4116 4.13281L6.52771 28.5385H10.5858L12.7727 23.077H22.0114L24.2001 28.5389H28.2582L17.4116 4.13281ZM20.5905 19.7107H14.2327L17.4116 12.0617L20.5905 19.7107Z"
-            fill="white"
-          />      
-        </svg>
+       <img [src]="tool.path" [alt]="'Ícone ' + tool.name" class="w-7 max-[425px]:w-5" [ariaLabel]="'Ícone ' + tool.path">
         <div class="hidden absolute -top-10 float-start bg-primary shadow-lg py-2 px-4 rounded-full group-hover:block outline outline-1 outline-slate-200">
-          <p class="text-xs text-tertiary font-mona font-semibold">
-            Angular
+          <p class="text-xs text-tertiary font-mona font-semibold text-nowrap">
+            {{tool.name}}
           </p>
         </div>
       </div>
