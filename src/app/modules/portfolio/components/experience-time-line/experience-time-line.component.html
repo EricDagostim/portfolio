@@ -56,19 +56,17 @@
 
         <div class="p-4 pt-0 transition">
           <p class="text-md font-mona text-slate-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
-            voluptates cupiditate, fugit facilis sequi commodi, tempore
-            laudantium, explicabo ipsum incidunt voluptatem! Facere similique
-            corrupti commodi sequi numquam nesciunt sint culpa.
+            {{ experience.description }}
           </p>
 
-          <p class="mt-2">
-            <strong class="font-mona text-md">Tecnologias:</strong>
-            <span class="text-md font-mona text-slate-600">
-              HTML, CSS, JavaScript, PHP, CakePHP, Bootstrap, Google Analytics e
-              Figma.
-            </span>
-          </p>
+          @if (experience.tools != '') {
+            <p class="mt-2">
+              <strong class="font-mona text-md">Tecnologias:</strong>
+              <span class="text-md font-mona text-slate-600">
+                {{ experience.tools }}
+              </span>
+            </p>
+          }
         </div>
       </details>
     </div>

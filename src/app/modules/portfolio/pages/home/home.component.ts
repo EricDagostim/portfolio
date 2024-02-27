@@ -3,6 +3,8 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardProjectComponent } from '../../components/card-project/card-project.component';
 import { ExperienceTimeLineComponent } from '../../components/experience-time-line/experience-time-line.component';
+import { SplashIconsComponent } from '../../components/splash-icons/splash-icons.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 //Components
 
@@ -10,7 +12,7 @@ import { ExperienceTimeLineComponent } from '../../components/experience-time-li
   selector: 'app-home',
   standalone: true,
   imports: [
-    NavbarComponent, HeaderComponent, CardProjectComponent, ExperienceTimeLineComponent
+    NavbarComponent, HeaderComponent, CardProjectComponent, ExperienceTimeLineComponent, SplashIconsComponent, FooterComponent
   ],
   templateUrl: './home.component.html',  
 })
@@ -125,5 +127,34 @@ export class HomeComponent {
       ]
     }
   ];
+
+  public splashIcons = [
+    {      
+      path: "/assets/svg/icon-figma.svg",
+      position: "absolute top-[10%] left-[10%]"
+    },
+    {      
+      path: "/assets/svg/icon-angular.svg",
+      position: "absolute top-[10%] left-[20%]"
+    },
+    {      
+      path: "/assets/svg/icon-rxjs.svg",
+      position: "absolute top-[10%] left-[30%]"
+    },
+    {      
+      path: "/assets/svg/icon-tailwind.svg",
+      position: "absolute top-[10%] left-[40%]"
+    },
+    {
+      path: "/assets/svg/icon-typescript.svg",
+      position: "absolute top-[10%] left-[50%]"
+    },
+    {      
+      path: "/assets/svg/icon-google.svg",
+      position: "absolute top-[10%] left-[60%]"
+    },
+  ]
+
+
 
 }

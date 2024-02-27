@@ -18,7 +18,7 @@
         
     @for (tool of project.tools; track $index) {
       <div class="group">
-       <img [src]="tool.path" [alt]="'Ícone ' + tool.name" class="w-7 max-[425px]:w-5" [ariaLabel]="'Ícone ' + tool.path">
+       <img [src]="tool.path" [alt]="'Ícone ' + tool.name" class="max-w-5 h-5 max-[425px]:w-5" [ariaLabel]="'Ícone ' + tool.path">
         <div class="hidden absolute -top-10 float-start bg-primary shadow-lg py-2 px-4 rounded-full group-hover:block outline outline-1 outline-slate-200">
           <p class="text-xs text-tertiary font-mona font-semibold text-nowrap">
             {{tool.name}}
